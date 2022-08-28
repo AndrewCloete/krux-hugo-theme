@@ -1,0 +1,15 @@
+{{- define "main" }}
+
+<header class="post-title">
+  <h1>
+    {{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}
+  </h1>
+</header>
+
+{{- if .Content }}
+<div class="post-content">
+  {{ .Content }}
+</div>
+{{- end }} 
+
+{{- end }}{{/* end main */}}
