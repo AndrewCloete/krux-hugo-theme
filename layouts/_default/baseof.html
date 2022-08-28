@@ -3,7 +3,9 @@
   {{- partial "head.html" . -}}
   <body>
     {{- partial "header.html" . -}}
-    <div id="content">{{- block "main" . }}{{- end }}</div>
+    <div id="content" class="pt-3 px-2 sm:px-10 max-w-screen-lg mx-auto">
+      {{- block "main" . }}{{- end }}
+    </div>
     {{- partial "footer.html" . -}}
   </body>
 </html>
