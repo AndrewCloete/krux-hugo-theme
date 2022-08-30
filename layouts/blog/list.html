@@ -1,0 +1,54 @@
+{{- define "main" }}
+  {{- $pages := union .RegularPages .Sections }}
+  {{- $paginator := .Paginate $pages }}
+
+  {{- $term := .Data.Term }}
+
+  {{- $authors := $.Site.Data.authors }}
+
+
+  <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+    {{- range $index,
+      $page := $paginator.Pages
+    }}
+      <div>
+        <a
+          class=""
+          aria-label="post link to {{ .Title | plainify }}"
+          href="{{ .Permalink }}"
+        >
+          <div class="my-2 hover:-translate-y-0.5 transition rounded-lg">
+            <img src="{{ .Params.Image }}" alt="..." class="rounded-lg" />
+            <article class="p-3 ">
+              <div class="block">
+                <h2 class="text-2xl 2xl:text-3xl">
+                  {{- .Title }}
+                  {{- if .Draft }}
+                    <sup><span class="">&nbsp;&nbsp;[draft]</span></sup>
+                  {{- end }}
+                </h2>
+                {{- range $author := .Params.authors }}
+                  <div class="text-gray-600 text-lg">
+                    {{ index $authors $author "name" }}
+                  </div>
+                {{- end }}
+                <div class="text-gray-600 italic">
+                  {{- .Params.Date | time.Format "2006-01-02" }}
+                </div>
+              </div>
+              {{- if (ne (.Param "hideSummary") true) }}
+                <div class="">
+                  <p>
+                    {{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}
+                      ...
+                    {{ end }}
+                  </p>
+                </div>
+              {{- end }}
+            </article>
+          </div>
+        </a>
+      </div>
+    {{- end }}
+  </div>
+{{- end }}{{- /* end main */ -}}

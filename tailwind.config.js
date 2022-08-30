@@ -2,7 +2,11 @@
 module.exports = {
   content: ["content/**/*.md", "./layouts/**/*.html"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        khaki: "rgb(99, 80, 10)",
+      },
+    },
   },
   plugins: [],
 };
