@@ -1,9 +1,10 @@
 {{- define "main" }}
 
   {{- $authors := $.Site.Data.authors }}
+  <div class="w-4/5 mx-auto">
   <header class="post-title">
     <div class="block">
-      <img src="{{ .Params.Image }}" alt="..."/>
+      <img src="{{ .Params.Image }}" alt="..." class="rounded-lg mx-auto"/>
       <div class="flex">
         {{- range $author := .Params.authors }}
         <div class="mx-auto flex flex-col items-center -translate-y-1/2">
@@ -32,7 +33,7 @@
           {{- .Params.Date | time.Format "2006-01-02" }}
         </div>
       </div>
-        <div class="">
+        <div class="lg:text-2xl">
           <p>
             {{ .Content }}
           </p>
@@ -41,4 +42,5 @@
   </div>
   {{- end }} 
 
+  </div>
 {{- end }}{{/* end main */}}

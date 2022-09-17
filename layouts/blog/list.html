@@ -7,7 +7,7 @@
   {{- $authors := $.Site.Data.authors }}
 
 
-  <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+  <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 w-4/5 mx-auto">
     {{- range $index,
       $page := $paginator.Pages
     }}
@@ -37,13 +37,13 @@
                 </div>
               </div>
               {{- if (ne (.Param "hideSummary") true) }}
-                <div class="">
+                <!-- <div class="lg:text-xl">
                   <p>
                     {{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}
-                      ...
-                    {{ end }}
+                  ...
+                {{ end }}
                   </p>
-                </div>
+                </div> -->
               {{- end }}
             </article>
           </div>

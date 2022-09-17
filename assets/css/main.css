@@ -2,62 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --gap: 24px;
-    --content-gap: 20px;
-    --nav-width: 1024px;
-    --main-width: 720px;
-    --header-height: 60px;
-    --footer-height: 60px;
-    --radius: 8px;
-    --theme: rgb(255, 255, 255);
-    --entry: rgb(255, 255, 255);
-    --primary: rgb(30, 30, 30);
-    --secondary: rgb(108, 108, 108);
-    --tertiary: rgb(214, 214, 214);
-    --content: rgb(31, 31, 31);
-    --hljs-bg: rgb(28, 29, 33);
-    --code-bg: rgb(245, 245, 245);
-    --border: rgb(238, 238, 238);
-}
 
 body {
-  font-family: "sans-serif";
+  margin: 0;
 }
 
-.post-entry {
-    position: relative;
-    margin-bottom: var(--gap);
-    padding: var(--gap);
-    background: var(--entry);
-    border-radius: var(--radius);
-    transition: transform 0.1s;
-    border: 1px solid var(--border);
+.parallax {
+  height: 100vh;
+  color: white;
 }
 
-.entry-content {
-    margin: 8px 0;
-    color: var(--secondary);
-    font-size: 14px;
-    line-height: 1.6;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+
+.bg {
+  background: linear-gradient(rgba(30, 30, 30, 0.8), rgba(30, 30, 30, 0.8)),
+    url("/main.png");
+  background-size: auto 130vh;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.entry-link {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-
-.entry-header h2 {
-    font-size: 24px;
-    line-height: 1.3;
-}
 
 .page-header,
 .post-header {
@@ -72,6 +35,25 @@ body {
 .post-description {
     margin-top: 10px;
     margin-bottom: 5px;
+}
+
+.post-meta,
+.breadcrumbs {
+    color: var(--secondary);
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-meta .i18n_list li {
+    display: inline-flex;
+    list-style: none;
+    margin: auto 3px;
+    box-shadow: 0 1px 0 var(--secondary);
+}
+
+.breadcrumbs a {
+    font-size: 16px;
 }
 
 .post-content {
