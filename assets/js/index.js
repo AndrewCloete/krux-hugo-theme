@@ -10,11 +10,11 @@ const scrollTrackingTimeline = new ScrollTimeline({
 if (parallax) {
   const height = parallax.clientHeight;
   const viewPortFraction = height / window.innerHeight;
-  const changePercent = 10 * viewPortFraction ** 3;
+  const changePercent = 20 * viewPortFraction ** 3;
   parallax.animate(
     {
       //   backgroundPositionY: [`-${diff}px`, `${diff}px`],
-      backgroundPositionY: [`${50 - changePercent}%`, `${50 + changePercent}%`],
+      backgroundPositionY: [`${50 + changePercent}%`, `${50 - changePercent}%`],
     },
     {
       duration: 1,
