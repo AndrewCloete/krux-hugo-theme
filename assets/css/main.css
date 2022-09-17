@@ -7,18 +7,22 @@ body {
   margin: 0;
 }
 
-.parallax {
-  height: 100vh;
-  color: white;
-}
-
 
 .bg {
   background: linear-gradient(rgba(30, 30, 30, 0.8), rgba(30, 30, 30, 0.8)),
-    url("/main.png");
+    url("/dining1.png");
   background-size: auto 130vh;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+
+.bg2 {
+  background-image: url("/lounge.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
 }
 
 

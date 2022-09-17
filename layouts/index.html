@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <div class="parallax bg flex flex-col justify-center">
+  <div class="parallax h-[100vh] bg flex flex-col justify-center">
     <div class="mx-auto flex flex-col">
       <h1 class="text-7xl flex mx-auto text-gray-300">KRUX</h1>
       <h1 class="text-lg font-sans text-gray-300">
@@ -7,36 +7,52 @@
       </h1>
     </div>
   </div>
-  <div class="pt-4 mx-auto w-4/5">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Amet risus nullam eget
-    felis eget nunc lobortis mattis aliquam. Diam donec adipiscing tristique
-    risus nec. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien.
-    Quis varius quam quisque id. Quis ipsum suspendisse ultrices gravida dictum.
-    Elit scelerisque mauris pellentesque pulvinar pellentesque. Mauris a diam
-    maecenas sed enim ut sem viverra aliquet. Etiam non quam lacus suspendisse
-    faucibus interdum posuere lorem. Tortor at auctor urna nunc id. Nam libero
-    justo laoreet sit amet cursus. Et magnis dis parturient montes. Nulla
-    pellentesque dignissim enim sit amet venenatis. Viverra mauris in aliquam
-    sem. Quis imperdiet massa tincidunt nunc. Non sodales neque sodales ut. Nibh
-    cras pulvinar mattis nunc sed blandit. Ultrices mi tempus imperdiet nulla.
-    Vitae proin sagittis nisl rhoncus. Lorem dolor sed viverra ipsum. Eget mi
-    proin sed libero enim sed faucibus turpis. Aliquam eleifend mi in nulla
-    posuere sollicitudin aliquam ultrices. Convallis a cras semper auctor neque
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Amet risus nullam eget
-    felis eget nunc lobortis mattis aliquam. Diam donec adipiscing tristique
-    risus nec. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien.
-    Quis varius quam quisque id. Quis ipsum suspendisse ultrices gravida dictum.
-    Elit scelerisque mauris pellentesque pulvinar pellentesque. Mauris a diam
-    maecenas sed enim ut sem viverra aliquet. Etiam non quam lacus suspendisse
-    faucibus interdum posuere lorem. Tortor at auctor urna nunc id. Nam libero
-    justo laoreet sit amet cursus. Et magnis dis parturient montes. Nulla
-    pellentesque dignissim enim sit amet venenatis. Viverra mauris in aliquam
-    sem. Quis imperdiet massa tincidunt nunc. Non sodales neque sodales ut. Nibh
-    cras pulvinar mattis nunc sed blandit. Ultrices mi tempus imperdiet nulla.
-    Vitae proin sagittis nisl rhoncus. Lorem dolor sed viverra ipsum. Eget mi
-    proin sed libero enim sed faucibus turpis. Aliquam eleifend mi in nulla
-    posuere sollicitudin aliquam ultrices. Convallis a cras semper auctor neque
+  <div class="bg-lkhaki py-10">
+    <div class="mx-auto w-3/4">
+      <div class="mb-2">
+        <h1 class="text-3xl text-khaki font-semibold -mb-2">ABOUT</h1>
+        <h1 class="text-5xl text-blood font-mono">KRUX</h1>
+      </div>
+      <div class="font-sans flex flex-wrap">
+        <div class="lg:w-1/2 px-2">
+          Our mission is best described as
+          <span class="italic">theological discipleship</span>-a form of
+          discipleship that seeks to bring both thought and behaviour under the
+          lordship of Christ in fellowship with the work of the Holy Spirit.
+          Primarily this means gaining a deep understanding of God's great act
+          toward us in Christ, and therefore, the consequences of the Gospel for
+          all of human endeavour. It rests on a foundation of Biblical
+          exposition and historical orthodoxy, and is expressed as a living
+          theology in robust engagement with the real world.
+        </div>
+        <div class="lg:w-1/2 px-2">
+          We believe a deep theological grounding can only be truly achieved
+          within community. At KRUX, community is undergirded by study courses
+          and dialogue, mentorship, practicing hospitality, and engaging with
+          the Arts.
+          <br />
+          <div
+            class="bg-khaki px-4 py-3 rounded-md my-2 inline-block font-semibold text-xs"
+          >
+            <a href="./what-we-do" class="text-white">READ MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-darkg py-10">
+    <div class="flex mb-5">
+      <img class="w-6 mx-auto" src="/Verticle-logo.png" alt="" />
+    </div>
+    <div class="mx-auto w-1/2 lg:w-1/4 text-white font-sans text-center">
+      <span class="italic"
+        >"Christ did not come to make us christian, but to make us human."</span
+      >
+      <br />
+      -
+      <br />
+      Hans Rookmaaker
+    </div>
   </div>
 {{ end }}
