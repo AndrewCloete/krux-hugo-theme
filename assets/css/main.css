@@ -8,14 +8,6 @@ body {
 }
 
 
-.bg-dining1 {
-  background: linear-gradient(rgba(30, 30, 30, 0.8), rgba(30, 30, 30, 0.8)),
-    url("/dining1.png");
-  background-size: auto 150vh;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 
 .bg-lounge {
   background-image: url("/lounge.png");
