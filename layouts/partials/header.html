@@ -1,19 +1,21 @@
 <header class="header class mb-3">
   <nav class="shadow-lg container mx-auto px-6 py-4 rounded-lg">
-  <div class="flex items-center justify-between">
-    <div class="mb-2 sm:mb-0">
+  <div class="flex flex-wrap items-center justify-between">
+    <div class="mb-2 sm:mb-0 w-full sm:w-auto text-center">
       <a
         href="{{ .Site.BaseURL }}"
         class="text-2xl no-underline text-gray-800 hover:text-gray-400"
         >KRUX</a
       >
     </div>
-    <div>
+    <div class="flex flex-wrap w-full sm:w-auto px-auto">
         {{- $currentPage := . }}
             {{- range site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink | absLangURL }}
             {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
+            <div class="w-full sm:w-auto text-center">
+
                 <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                 {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}
                 class="text-lg no-underline text-gray-800 hover:text-gray-400 px-2 lg:px-3"
@@ -32,10 +34,11 @@
                     </svg>
                     {{- end }}
                 </a>
+            </div>
             {{- end }}
     </div>
-    <div class="bg-khaki px-4 py-3 rounded-lg font-sans text-xs font-semibold tracking-widest">
-      <a href="https://uwm.org/projects/63685/" class="text-white">DONATE</a>
+    <div class="bg-khaki my-2 px-4 py-3 rounded-lg font-sans text-xs font-semibold tracking-widest w-full sm:w-auto text-center">
+      <a href="https://uwm.org/projects/63685/" class="text-white"><span class="mx-auto">DONATE</span></a>
     </div>
   </nav>
 </header>

@@ -8,39 +8,41 @@
   {{- $authors := $.Site.Data.authors }}
 
 
-  <div class="flex w-4/5 mx-auto">
+  <div class="flex flex-wrap w-4/5 mx-auto">
     {{- range $index,
       $page := $paginator.Pages
     }}
-      <a
-        aria-label="post link to {{ .Title | plainify }}"
-        href="{{ .Permalink }}"
-      >
-        <article class="my-2 p-3 rounded-lg hover:bg-gray-200">
-          <div class="block">
-            <img
-              src="{{ $staticURL }}{{ index $authors .Params.author "imageUrl" }}?raw=true"
-              class="w-32 p-3 rounded"
-              alt="..."
-            />
-            <h2 class="text-2xl">
-              {{- .Title }}
-              {{- if .Draft }}
-                <sup><span class="">&nbsp;&nbsp;[draft]</span></sup>
-              {{- end }}
-            </h2>
-          </div>
-          {{- if (ne (.Param "hideSummary") true) }}
-            <div class="">
-              <p>
-                {{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}
-                  ...
-                {{ end }}
-              </p>
+      <div class="container p-3 lg:w-1/2">
+        <a
+          aria-label="post link to {{ .Title | plainify }}"
+          href="{{ .Permalink }}"
+        >
+          <article class="rounded-lg hover:bg-gray-200">
+            <div class="block">
+              <img
+                src="{{ $staticURL }}{{ index $authors .Params.author "imageUrl" }}?raw=true"
+                class="w-32 p-3 rounded"
+                alt="..."
+              />
+              <h2 class="text-2xl">
+                {{- .Title }}
+                {{- if .Draft }}
+                  <sup><span class="">&nbsp;&nbsp;[draft]</span></sup>
+                {{- end }}
+              </h2>
             </div>
-          {{- end }}
-        </article>
-      </a>
+            {{- if (ne (.Param "hideSummary") true) }}
+              <div class="">
+                <p>
+                  {{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}
+                    ...
+                  {{ end }}
+                </p>
+              </div>
+            {{- end }}
+          </article>
+        </a>
+      </div>
     {{- end }}
   </div>
 {{- end }}{{- /* end main */ -}}
