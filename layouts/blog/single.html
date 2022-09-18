@@ -1,15 +1,15 @@
 {{- define "main" }}
-
+  {{$staticURL := .Site.Params.staticURL}}
   {{- $authors := $.Site.Data.authors }}
   <div class="w-4/5 mx-auto">
   <header class="post-title">
     <div class="block">
-      <img src="{{ .Params.Image }}" alt="..." class="rounded-lg mx-auto"/>
+      <img src="{{.Site.Params.staticURL}}/{{ .Params.Image }}?raw=true" alt="..." class="rounded-lg mx-auto"/>
       <div class="flex">
         {{- range $author := .Params.authors }}
         <div class="mx-auto flex flex-col items-center -translate-y-1/2">
           <img
-            src="{{ index $authors $author "imageUrl" }}"
+            src="{{$staticURL}}{{ index $authors $author "imageUrl" }}?raw=true"
             class="w-32 rounded-full"
             alt="..."
           />

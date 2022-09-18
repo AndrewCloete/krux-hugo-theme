@@ -1,4 +1,5 @@
 {{- define "main" }}
+  {{ $staticURL := .Site.Params.staticURL }}
   {{- $pages := union .RegularPages .Sections }}
   {{- $paginator := .Paginate $pages }}
 
@@ -18,7 +19,7 @@
         <article class="my-2 p-3 rounded-lg hover:bg-gray-200">
           <div class="block">
             <img
-              src="{{ index $authors .Params.author "imageUrl" }}"
+              src="{{ $staticURL }}{{ index $authors .Params.author "imageUrl" }}?raw=true"
               class="w-32 p-3 rounded"
               alt="..."
             />
