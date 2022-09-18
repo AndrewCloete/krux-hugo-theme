@@ -1,5 +1,7 @@
 {{- define "main" }}
 
+<div class=" container px-4 lg:w-1/2 mx-auto">
+
 <header class="post-title">
   <h1>
     {{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}
@@ -11,5 +13,6 @@
   {{ .Content }}
 </div>
 {{- end }} 
+</div>
 
 {{- end }}{{/* end main */}}
